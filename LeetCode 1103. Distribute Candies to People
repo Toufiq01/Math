@@ -15,3 +15,13 @@ class Solution {
     }  
 }
 
+//or modified solution
+class Solution {
+    public int[] distributeCandies(int candies, int num_people) {
+        int[] distribution = new int[num_people];
+        for(int i =0; candies>0; candies-= ++i){
+            distribution[i%num_people] += Math.min(candies, i+1);
+        }
+        return distribution;
+    }  
+}
