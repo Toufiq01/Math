@@ -1,0 +1,29 @@
+class Solution {
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        
+        ArrayList < Integer> possible = new ArrayList <Integer> ();
+        // k=0;
+        for (int i=left; i<=right;i++ ){
+            if( i<10){
+                possible.add(i);
+            } else {
+                int key =i;
+                while( key!=0 ){
+                    int j=key%10;
+                    if (j==0){
+                        break;
+                    }
+                    if(i % j!= 0 ){
+                        break;
+                    }
+                    key = key/10;
+                }
+                if(key == 0){
+                    possible.add(i);
+                }
+            }
+            
+        }
+        return possible;
+    }
+}
