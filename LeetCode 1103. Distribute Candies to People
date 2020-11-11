@@ -25,3 +25,21 @@ class Solution {
         return distribution;
     }  
 }
+// learning recursion
+class Solution {
+    public int[] etaration(int[] distributation, int num_people, int candies, int i){
+        if(candies<=0) return distributation; 
+        distributation[i%num_people] += Math.min(candies, i+1);
+        candies-= i+1;
+        i++;
+        return etaration(distributation, num_people, candies, i);
+        
+    }
+    public int[] distributeCandies(int candies, int num_people) {
+        int[] distributation = new int[num_people];
+        int i=0;
+        etaration(distributation, num_people, candies, i);
+        return distributation;
+        
+    }  
+}
