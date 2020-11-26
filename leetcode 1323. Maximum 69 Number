@@ -1,0 +1,13 @@
+class Solution {
+    public int maximum69Number (int num) {
+        int firstsix =-1;
+        int copynum = num;
+        for(int i =0; copynum>0; i++){
+            if(copynum%10 == 6) firstsix=i;
+            copynum/=10;
+        }
+        return num+ 3*(int)Math.pow(10, firstsix);
+    }
+}
+// Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum 69 Number.
+// Memory Usage: 37.3 MB, less than 5.23% of Java online submissions for Maximum 69 Number.
