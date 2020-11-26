@@ -11,3 +11,13 @@ class Solution {
 }
 // Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum 69 Number.
 // Memory Usage: 37.3 MB, less than 5.23% of Java online submissions for Maximum 69 Number.
+
+// second solution
+class Solution {
+    public int maximum69Number (int num) {
+        
+        return Integer.parseInt((""+num).replaceFirst("6","9"));
+    }
+}
+// Runtime: 11 ms, faster than 5.29% of Java online submissions for Maximum 69 Number.
+// Memory Usage: 35.9 MB, less than 55.29% of Java online submissions for Maximum 69 Number.
