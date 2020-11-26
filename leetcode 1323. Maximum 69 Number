@@ -1,5 +1,20 @@
 class Solution {
     public int maximum69Number (int num) {
+        char[] numArray = Integer.toString(num).toCharArray();
+        for(int i=0; i<numArray.length; i++){
+            if(numArray[i] == '6') {
+                numArray[i]='9';
+                break;
+            }
+        }
+        return Integer.parseInt(new String(numArray));
+    }
+}
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum 69 Number.
+Memory Usage: 35.5 MB, less than 96.98% of Java online submissions for Maximum 69 Number.
+// or
+class Solution {
+    public int maximum69Number (int num) {
         int firstsix =-1;
         int copynum = num;
         for(int i =0; copynum>0; i++){
