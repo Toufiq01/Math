@@ -11,5 +11,8 @@ class Solution {
         
     }
 }
+Complexity
+Time O(logN)
+Space O(1)
 // Runtime: 0 ms, faster than 100.00% of Java online submissions for Water and Jug Problem.
 // Memory Usage: 35.7 MB, less than 60.75% of Java online submissions for Water and Jug Problem.
